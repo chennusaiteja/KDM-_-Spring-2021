@@ -5,7 +5,6 @@ import logging
 import os
 import pickle
 import timeit
-import random
 import warnings
 
 from __init__ import Reader
@@ -100,8 +99,7 @@ def main():
 
     stop = timeit.default_timer()
     logging.info('Time taken for prediction: {0}. Is it a baby cry?? {1}'.format(stop - start, majority_vote))
-    if(majority_vote==1):
-        majority_vote=random.randint(1,3)
+    
     # SAVE
     if majority_vote==1:
         majority_vote="Baby is Tired"
